@@ -1,0 +1,16 @@
+mat-form-field {
+  width: 100%;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+.footer {
+  text-align: right;
+  button {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}

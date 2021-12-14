@@ -1,0 +1,35 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'side'">
+    <div class="drawer-container">
+      <div class="close" (click)="drawer.toggle()">
+        X
+      </div>
+      <div class="routes">
+          <div (click)="drawer.toggle()" routerLink="/tasks">
+            <mat-icon>task</mat-icon>
+            <span>Tasks</span>
+          </div>
+          <div (click)="drawer.toggle()" routerLink="/contact-us">
+            <mat-icon>contacts</mat-icon>
+            <span>Contact Us</span>
+          </div>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content">
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Admin Panel</span>
+      <span class="spacer"></span>
+      <div class="user-info">
+        <span>Vignesh N</span>
+        <mat-icon>account_circle</mat-icon>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+  </mat-drawer-content>
+</mat-drawer-container>

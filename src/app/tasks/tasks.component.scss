@@ -1,0 +1,29 @@
+.tasks {
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+
+    span {
+      margin-left: 10px;
+    }
+    mat-icon {
+      width: 25px;
+      height: 25px;
+      font-size: 25px;
+    }
+  }
+
+  &__table {
+    margin-top: 25px;
+    table {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+<div>
+  <form [formGroup]="taskForm" (ngSubmit)="createOrModifyTask()">
+  <div> <h3>Create Task</h3></div>
+  <div class="field">
+    <mat-form-field appearance="fill">
+      <mat-label>Task Name</mat-label>
+      <input formControlName="name" matInput required>
+    </mat-form-field>
+  </div>
+  <div class="field">
+    <mat-form-field appearance="fill">
+      <mat-label>Project Name</mat-label>
+      <input formControlName="project" matInput required>
+    </mat-form-field>
+  </div>
+  <div class="field">
+    <mat-form-field appearance="fill">
+      <mat-label>Comments</mat-label>
+      <textarea formControlName="comments" matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div class="footer">
+    <button mat-raised-button (click)="closeDialog()" type="button">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!taskForm.valid">{{ mode === "CREATE" ? "Create" : "Edit"}}</button>
+  </div>
+</form>
+</div>

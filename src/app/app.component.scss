@@ -1,0 +1,41 @@
+.content {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.mat-drawer {
+  width: 200px;
+}
+
+.routes {
+  div {
+    height: 25px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+div.close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  padding: 5%;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  mat-icon {
+    margin-left: 10px;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
