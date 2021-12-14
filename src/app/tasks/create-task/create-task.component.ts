@@ -13,7 +13,8 @@ type MODE = 'CREATE' | 'EDIT';
 })
 export class CreateTaskComponent implements OnInit {
   taskForm
-  mode: MODE = 'CREATE'
+  mode: MODE = 'CREATE';
+  projects = ["Project 1", "Project 2", "Project 3"];
   constructor(private readonly fb: FormBuilder, private dialogRef: MatDialogRef<CreateTaskComponent>, private readonly taskService: TasksService, @Inject(MAT_DIALOG_DATA) public data: { task: ITask }) { }
 
   ngOnInit(): void {

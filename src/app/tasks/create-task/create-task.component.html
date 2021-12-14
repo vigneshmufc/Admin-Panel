@@ -10,9 +10,13 @@
   </div>
   <div class="field">
     <mat-form-field appearance="fill">
-      <mat-label>Project Name</mat-label>
-      <input formControlName="project" matInput required>
-    </mat-form-field>
+    <mat-label>Select Project</mat-label>
+    <mat-select formControlName="project" required >
+      <ng-container *ngFor="let project of projects">
+        <mat-option value="{{project}}">{{project}}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
   </div>
   <div class="field">
     <mat-form-field appearance="fill">
